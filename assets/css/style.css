@@ -1,0 +1,372 @@
+/*RESET CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CONFIG SCROLL SUAVE*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*VARIÁVEIS*/
+:root {
+    --white: #FFF;
+    --black: #000;
+    --magenta: #FF2A6D;
+    --blue-suave: #05D9E8;
+    --blue-dark: #01012B;
+    --blue-suave-dark: #005678;
+    --blue-white: #D1F7FF;
+}
+
+/*CONFIG HEADER*/
+#header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 1140px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*CONFIG MENU*/
+#menu-toggle {
+    width: 24px;
+    height: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.line1, .line2, .line3 {
+    height: 3px;
+    width: 24px;
+    background-color: #000;
+}
+
+/*CONFIG LOGO*/
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    width: 64px;
+    height: 64px;
+}
+
+/*CONFIG BUTTONS*/
+#menu-list ul, #menu-list li {
+    list-style: none;
+    display: inline-flex;
+    padding: 0px 24px;
+}
+
+#menu-list a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--black);
+    transition: all linear 500ms;
+}
+
+#menu-list a:hover, #menu-list .button-activate a {
+    color: var(--blue-suave);
+}
+
+/*CONFIG BANNER PCL*/
+#banner-pcl {
+    background-image: url(/assets/img/background-pcl.png);
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CONFIG DESCRIPTION*/
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.title-banner h1 {
+    font-size: 96px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.subtitle-banner h2 {
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--white);
+}
+
+/*CONFIG SECTION NEWS*/
+#section-news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/*CONFIG TEXT NEWS*/
+.text-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.title-news spam {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.title-news h3 {
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--black);
+    margin-top: 20px;
+}
+
+.description-news p {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.img-news {
+    background-image: url(/assets/img/img-news.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 488px;
+    border-radius: 10px;
+}
+
+/*CONFIG SECTION NEWS*/
+#section-future {
+    background-image: linear-gradient(to right, var(--black), var(--blue-suave-dark));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+}
+
+.future-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.future-description h4 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--white);
+}
+
+.future-description p {
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 100;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.future-galeria {
+    max-width: 1140px;
+    height: 150px;
+    display: flex;
+}
+
+.img-future {
+    flex: 1;
+}
+
+.img-future img {
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+} 
+
+.img-future img:hover {
+    opacity: 100%;
+}
+
+/*CONFIG SECTION BLOG*/
+#section-blog {
+    padding: 70px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-button {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.area1 {
+    background-color: var(--blue-white);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 30px;
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--black);
+    opacity: 70%;
+    transition: all 0.5s;
+}
+
+.area2 {
+    background-image: url(/assets/img/placa-tattoo.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 66px;
+    opacity: 70%;
+    transition: all 0.5s;
+}
+
+.area3 {
+    background-image: url(/assets/img/model-tattoo.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    height: 480px;
+    opacity: 70%;
+    transition: all 0.5s;
+}
+
+.area4 {
+    background-color: var(--blue-suave-dark);
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    padding: 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    opacity: 70%;
+    transition: all 0.5s;
+}
+
+.area1:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.area2:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.area3:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.area4:hover {
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.blog-button button{
+    margin-top: 40px;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--blue-suave-dark);
+    border: none;
+    border-radius: 10px;
+    font-family: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: all linear 400ms;
+    cursor: pointer;
+}
+
+.blog-button button:hover {
+    background-color: var(--blue-suave);
+}
+
+/*CONFIG SECTION INFO*/
+#section-info {
+    padding: 70px 0px;
+    background-color: var(--blue-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/*CONFIG SECTION INFO BOXS*/
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.box img {
+    width: 60px;
+    height: 60px;
+}
+
+.box h4 {
+    color: var(--white);
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+
+.box p {
+    color: var(--blue-white);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}

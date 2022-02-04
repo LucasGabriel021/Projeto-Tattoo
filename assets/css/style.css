@@ -88,11 +88,14 @@ body::-webkit-scrollbar {
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
     color: var(--black);
-    transition: all linear 500ms;
+    transition: all 0.5s;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
 }
 
 #menu-list a:hover, #menu-list .button-activate a {
     color: var(--blue-suave);
+    border-bottom: 1px solid var(--blue-suave);
 }
 
 /*CONFIG BANNER PCL*/
@@ -121,7 +124,7 @@ body::-webkit-scrollbar {
 }
 
 .subtitle-banner h2 {
-    font-size: 24px;
+    font-size: 33px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--blue-suave);

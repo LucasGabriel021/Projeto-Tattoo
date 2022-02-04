@@ -370,3 +370,159 @@ html{
     font-weight: normal;
     text-align: center;
 }
+
+/*CONFIG SECTION SECTION MINI GALERIA*/
+#section-mini-galeria {
+    padding: 70px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-galeria-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+/*CONFIG TEXT MINI GALERIA*/
+.text-mini-galeria {
+    text-align: center;
+}
+
+.text-mini-galeria h4 {
+    font-size: 36px;
+    font-family: 'Poopins', sans-serif;
+    font-weight: normal;
+    color: var(--magenta);
+}
+
+.text-mini-galeria p {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--black);
+    margin-top: 40px;
+}
+
+/*CONFIG IMGS MINI GALERIA*/
+.images-mini-galeria {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    gap: 30px;
+}
+
+.galeria-img1, .galeria-img2, .galeria-img3 {
+    flex: 1;
+}
+
+.galeria-img1 img, .galeria-img2 img, .galeria-img3 img {
+    width: 100%;
+    height: 100%;
+}
+
+/*CONFIG SECTION TEXTO*/ 
+#section-texto {
+    background-color: var(--black);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.texto-container {
+    padding: 70px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.texto p {
+    color: var(--white);
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.autor {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/*SECTION TATTOO GEOMETRICO*/
+#section-tatto-geometrico {
+    display: flex;
+    justify-content: center;
+}
+
+.geometrico-container {
+    padding: 70px 0px;
+}
+
+.area-geometrico-conteudo{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    transition: all linear 0.5s;
+}
+
+.area-geometrico-conteudo:hover {
+    transform: scale(1.1);
+}
+
+.geometrico-left {
+    flex: 2;
+}
+
+.geometrico-left img {
+    width: 100%;
+    height: 100%;
+}
+
+.geometrico-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 33px;
+    background-color: var(--blue-white);
+    border: 1px solid var(--blue-white);
+}
+
+.texto-right h4 {
+    color: var(--black);
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+.texto-right p {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.button-right button{
+    margin-top: 40px;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--blue-suave-dark);
+    border: none;
+    border-radius: 10px;
+    font-family: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: all linear 400ms;
+    cursor: pointer;
+}
+
+.button-right button:hover {
+    background-color: var(--blue-suave);
+}

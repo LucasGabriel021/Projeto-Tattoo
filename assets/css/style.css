@@ -5,9 +5,18 @@
     box-sizing: border-box;
 }
 
-/*CONFIG SCROLL SUAVE*/
-html{
-    scroll-behavior: smooth;
+/*PERSONALIZAÇÃO SCROLL BAR*/
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #05D9E8;
+    border-radius: 5px;
 }
 
 /*VARIÁVEIS*/
@@ -114,8 +123,8 @@ html{
 .subtitle-banner h2 {
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-    color: var(--white);
+    font-weight: 700;
+    color: var(--blue-suave);
 }
 
 /*CONFIG SECTION NEWS*/
@@ -150,7 +159,7 @@ html{
 .title-news h3 {
     font-size: 36px;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-weight: 700;
     color: var(--black);
     margin-top: 20px;
 }
@@ -188,7 +197,7 @@ html{
 .future-description h4 {
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-weight: 700;
     color: var(--white);
 }
 
@@ -360,7 +369,7 @@ html{
     color: var(--white);
     font-size: 26px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 700;
 }
 
 .box p {
@@ -395,7 +404,7 @@ html{
 .text-mini-galeria h4 {
     font-size: 36px;
     font-family: 'Poopins', sans-serif;
-    font-weight: normal;
+    font-weight: 700;
     color: var(--magenta);
 }
 
@@ -454,66 +463,62 @@ html{
     margin-top: 20px;
 }
 
-/*SECTION TATTOO GEOMETRICO*/
-#section-tatto-geometrico {
+/*SECTION TATTOO TRIBAL*/
+#section-tribal {
     display: flex;
     justify-content: center;
+    
+    padding: 70px;
 }
 
-.geometrico-container {
+.tibal-container {
     padding: 70px 0px;
 }
 
-.area-geometrico-conteudo{
+.area-tribal-conteudo{
     display: flex;
     width: 100%;
     height: 500px;
-    transition: all linear 0.5s;
 }
 
-.area-geometrico-conteudo:hover {
-    transform: scale(1.1);
-}
-
-.geometrico-left {
+.tribal-right {
     flex: 2;
 }
 
-.geometrico-left img {
+.tribal-right img {
     width: 100%;
     height: 100%;
 }
 
-.geometrico-right {
+.tribal-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 33px;
-    background-color: var(--blue-white);
-    border: 1px solid var(--blue-white);
+    background-color: var(--blue-suave-dark);
 }
 
-.texto-right h4 {
-    color: var(--black);
+.texto-left h4 {
+    color: var(--white);
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-weight: 700;
 }
 
-.texto-right p {
-    color: #000;
+.texto-left p {
+    color: #FFF;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
     margin-top: 30px;
 }
 
-.button-right button{
+.button-left button{
     margin-top: 40px;
     padding: 10px 30px;
     color: var(--white);
-    background-color: var(--blue-suave-dark);
+    background-color: var(--blue-suave);
     border: none;
     border-radius: 10px;
     font-family: 18px;
@@ -523,6 +528,164 @@ html{
     cursor: pointer;
 }
 
-.button-right button:hover {
+.button-left button:hover {
+    background-color: var(--blue-white);
+    color: #000;
+}
+
+/*CONFIG FOOTER CONTAINER*/
+#footer {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, var(--black), var(--blue-suave-dark));
+}
+
+.social-footer {
+    padding: 70px 0px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.social-footer a {
+    text-decoration: none;
+    color: var(--blue-suave);
+    font-size: 40px;
+    transition: all 0.5s;
+}
+
+.social-footer a:hover {
+    transform: scale(1.2);
+}
+
+.info-footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 70px 0px;
+}
+
+.caixa1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.logo-footer {
+    max-width: 120px;
+    height: 70px;
+}
+
+.logo-footer img {
+    width: 100%;
+}
+
+.text-footer p{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.text-footer a {
+    color: var(--blue-suave);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.caixa2 {
+    flex: 1;
+}
+
+.caixa2 h4{
+    color: var(--blue-white);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.caixa2 p {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.caixa3 h4{
+    color: var(--blue-white);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.caixa3 h5 {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.caixa3-endereco {
+    margin-bottom: 20px;
+}
+
+.caixa3 {
+    flex: 1;
+}
+
+.caixa4 {
+    flex: 1;
+}
+
+.linha {
+    width: 100%;
+    height: 2px;
+    background: var(--blue-suave);
+}
+
+.direitos-footer p{
+    color: var(--blue-suave);
+    padding: 20px 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/*BOTÃO ANCORA SETA*/
+#botao-ancora {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    display: none;
     background-color: var(--blue-suave);
+    padding: 8px;
+    border-radius: 25%;
+}
+
+#botao-ancora button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+#botao-ancora img {
+    width: 20px;
+    height: 18px;
 }

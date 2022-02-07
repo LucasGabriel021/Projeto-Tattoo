@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid transparent;
 }
 
-#menu-list a:hover, #menu-list .button-activate a {
+#menu-list a:hover {
     color: var(--blue-suave);
     border-bottom: 1px solid var(--blue-suave);
 }

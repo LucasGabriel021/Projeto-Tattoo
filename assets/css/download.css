@@ -9,6 +9,12 @@
     --blue-white: #D1F7FF;
 }
 
+/*CONFIG HEADER*/
+#menu-list a:hover, #menu-list .button-activate a {
+    color: var(--blue-suave);
+    border-bottom: 1px solid var(--blue-suave);
+}
+
 /*CONFIG MAIN*/
 #main-download {
     width: 100%;
@@ -100,4 +106,54 @@ h1 {
 
 .estrela-cult {
     opacity: 50%;
+}
+
+@media (max-width:576px) {  
+    #main-download {
+        height: auto;
+    }
+
+    .main-area {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 70px 30px;
+    }
+    
+    .main-left {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    .text-main p {
+        font-size: 16px;
+    }
+    
+    .main-right {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: 550px;
+    }
+    
+    .buttons-main {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .buttons-main a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    .android, .ios {
+        font-size: 16px;
+    }
+    
+    .android img, .ios img {
+        width: 16px;
+    }
 }

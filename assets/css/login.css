@@ -1,0 +1,16 @@
+/*VARIÁVEIS*/
+:root {
+    --white: #FFF;
+    --black: #000;
+    --magenta: #FF2A6D;
+    --blue-suave: #05D9E8;
+    --blue-dark: #01012B;
+    --blue-suave-dark: #005678;
+    --blue-white: #D1F7FF;
+}
+
+/*CONFIG HEADER*/
+#menu-list a:hover, #menu-list .button-activate a {
+    color: var(--blue-suave);
+    border-bottom: 1px solid var(--blue-suave);
+}

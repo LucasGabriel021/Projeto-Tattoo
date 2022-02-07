@@ -107,6 +107,7 @@ body {
 .org-container {
     margin: auto;
     padding: 50px;
+    width: 100%;
 }
 
 h2 {
@@ -122,6 +123,7 @@ p {
     font-size: 18px;
     font-weight: normal;
     color: #fff;
+    line-height: 25px;
 }
 
 a {
@@ -152,25 +154,6 @@ li {
     display: flex;
     justify-content: center;
     background-image: linear-gradient(to right, var(--black), var(--blue-suave-dark));
-}
-
-.social-footer {
-    padding: 70px 0px 30px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-}
-
-.social-footer a {
-    text-decoration: none;
-    color: var(--blue-suave);
-    font-size: 40px;
-    transition: all 0.5s;
-}
-
-.social-footer a:hover {
-    transform: scale(1.2);
 }
 
 .info-footer {
@@ -302,4 +285,46 @@ li {
 #botao-ancora img {
     width: 20px;
     height: 18px;
+}
+
+@media (max-width:576px) {
+    /*CONFIG SECTION HEADER*/
+    #header {
+        padding: 0px 30px;
+    }
+
+    #menu-list ul, #menu-list li {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: inline-flex;
+    }
+
+    .org-container {
+        padding: 50px 30px;
+    }
+
+
+    /*CONFIG FOOTER CONTAINER*/
+    .social-footer {
+        padding: 70px 30px;
+    }
+    
+    .info-footer {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0px 30px;
+    }
+    
+    .direitos-footer {
+        padding: 70px 30px 0px 30px;
+    }
+
+
+    /*CONFIG BOTÃO ANCORA*/
+    #botao-ancora {
+        right: 30px;
+        bottom: 30px;
+    }
 }

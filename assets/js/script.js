@@ -1,3 +1,4 @@
+//Config de Scroll suave
 function botaoAncora() {
     window.scrollTo(
         {
@@ -17,3 +18,15 @@ function decidirBotao() {
 }
 
 window.addEventListener('scroll', decidirBotao);
+
+
+//Config de botão toggle
+function menuAcao() {
+    let menuArea = document.getElementById('menu');
+    if (menuArea.classList.contains('menuOpen') == true) {
+        menuArea.classList.remove('menuOpen');
+    }
+    else {
+        menuArea.classList.add('menuOpen');
+    }
+}

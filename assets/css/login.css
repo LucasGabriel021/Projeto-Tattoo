@@ -14,3 +14,176 @@
     color: var(--blue-suave);
     border-bottom: 1px solid var(--blue-suave);
 }
+
+/*CONFIG SECTION LOGIN*/
+#login {
+    background-image: linear-gradient(to left, var(--blue-white), var(--blue-suave));
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+.login-container {
+    height: inherit;
+    padding: 70px 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.line-login {
+    height: 8px;
+    width: 90px;
+    background-image: linear-gradient(to left, var(--blue-suave), var(--blue-white));
+    border-radius: 1rem;
+    margin-bottom: 40px;
+}
+
+.login-left {
+    max-width: 500px;
+}
+
+.login-right {
+    width: 400px;
+}
+
+/*CONFIG LOGIN LEFT*/
+.login-left p {
+    font-size: 40px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/*CONFIG LOGIN RIGHT*/
+.text-login h2 {
+    font-size: 32px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    color: var(--magenta);
+    margin-bottom: 30px;
+}
+
+.text-login h3 {
+    font-size: 18px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    color: var(--magenta);
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+form input::placeholder {
+    color: var(--white);
+}
+
+form img {
+    width: 18px;
+    position: absolute;
+}
+
+#icone-email {
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+#icone-senha {
+    margin-top: 55px;
+    margin-left: 9px;
+}
+
+form input[type="email"], form input[type="password"] {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--white);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 0px 5px 35px;
+    color: #fff;
+}
+
+form input[type="email"]:focus, form input[type="password"]:focus {
+    border-bottom: 1px solid var(--magenta);
+}
+
+.confirmar-login {
+    margin-top: 40px;
+    background-color: var(--magenta);
+    border: none;
+    padding: 10px 40px;
+    font-family: 18px;
+    color: #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.confirmar-login::after {
+    content: '';
+    position: absolute;
+    left: calc(-0.5rem - 1px);
+    top: calc(-0.5rem - 1px);
+    width: calc(100% + 1rem);
+    height: calc(100% + 1rem);
+    border: 1px solid var(--magenta);
+    border-radius: 1.5rem;
+}
+
+.confirmar-login:hover, .confirmar-login:hover:after {
+    box-shadow: 0 0 30px var(--magenta);
+}
+
+#cadastro-login {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cadastro-login a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.esq-button {
+    color: var(--blue-suave-dark);
+}
+
+.esq-button:hover {
+    text-decoration: underline var(--blue-suave-dark) !important;
+}
+
+.criar-button {
+    color: var(--blue-dark);
+}
+
+.criar-button:hover {
+    text-decoration: underline var(--blue-dark) !important;
+}
+
+@media (max-width:576px) {
+    .login-left, .line-login {
+        display: none;
+    }
+
+    .login-right {
+        padding: 0px 30px;
+    }
+
+    .text-login h3 {
+        color: var(--magenta);
+    }
+
+    form input::placeholder {
+        color: var(--magenta);
+    }
+}

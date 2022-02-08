@@ -37,6 +37,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
 }
 
 .container {
@@ -475,7 +476,6 @@ body::-webkit-scrollbar {
 #section-tribal {
     display: flex;
     justify-content: center;
-    
     padding: 70px;
 }
 
@@ -490,21 +490,21 @@ body::-webkit-scrollbar {
 }
 
 .tribal-right {
-    flex: 2;
-}
-
-.tribal-right img {
-    width: 100%;
-    height: 100%;
-}
-
-.tribal-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 33px;
     background-color: var(--blue-suave-dark);
+}
+
+.tribal-left img {
+    width: 100%;
+    height: 100%;
+}
+
+.tribal-left {
+    flex: 2;
 }
 
 .texto-left h4 {
@@ -863,12 +863,12 @@ body::-webkit-scrollbar {
         height: auto;
     }
     
-    .tribal-right img {
+    .tribal-left img {
         width: 100%;
         height: 100%;
     }
     
-    .texto-left h4 {
+    .texto-right h4 {
         font-size: 36px;
     }
 

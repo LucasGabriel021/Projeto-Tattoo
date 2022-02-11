@@ -9,56 +9,48 @@
     --blue-white: #D1F7FF;
 }
 
-/*CONFIG BODY*/
+/*CONFIG GLOBAL*/
 body {
     background-image: linear-gradient(to right, var(--black), var(--blue-suave-dark));
 }
 
-.org-container {
-    margin: auto;
-    padding: 50px;
-    width: 100%;
-}
-
 h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font: 700 24px 'Poppins', sans-serif;
     color: #D1F7FF;
     margin: 30px 0px;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: normal;
-    color: #fff;
-    line-height: 25px;
+    font: normal 18px/25px 'Poppins', sans-serif;
     text-align: justify;
+    color: #fff;
 }
 
 a {
     text-decoration: none;
+    font: normal 18px 'Poppins', sans-serif;
     color: #05D9E8;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: normal;
 }
 
 h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+    font: 700 20px 'Poppins', sans-serif;
     color: #D1F7FF;
     margin: 10px 0px;
 }
 
 li {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
+    font: normal 16px 'Poppins', sans-serif;
     color: #fff;
 }
+
+/*CONFIG CONTAINER*/
+.org-container {
+    width: 100%;  
+    margin: auto;
+    padding: 50px; 
+}
+
+
 
 @media (max-width:576px) {
     /*CONFIG SECTION HEADER*/

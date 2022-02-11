@@ -17,9 +17,9 @@
 
 /*CONFIG SECTION LOGIN*/
 #login {
-    background-image: linear-gradient(to left, var(--blue-white), var(--blue-suave));
     width: 100%;
     height: calc(100vh - 80px);
+    background-image: linear-gradient(to left, var(--blue-white), var(--blue-suave));
 }
 
 .login-container {
@@ -39,54 +39,48 @@
     margin-bottom: 40px;
 }
 
+/*CONFIG LOGIN LEFT*/
 .login-left {
     max-width: 500px;
 }
 
+    .login-left p {
+        font: 700 40px 'Poppins',sans-serif;
+        color: var(--blue-dark);
+    }
+
+/*CONFIG LOGIN RIGHT*/
 .login-right {
     width: 400px;
 }
 
-/*CONFIG LOGIN LEFT*/
-.login-left p {
-    font-size: 40px;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 700;
-    color: var(--white);
-}
+    .text-login h2 {
+        font: 700 32px 'Poppins',sans-serif;
+        color: var(--blue-dark);
+        margin-bottom: 30px;
+    }
 
-/*CONFIG LOGIN RIGHT*/
-.text-login h2 {
-    font-size: 32px;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 700;
-    color: var(--magenta);
-    margin-bottom: 30px;
-}
-
-.text-login h3 {
-    font-size: 18px;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 700;
-    color: var(--magenta);
-    margin-bottom: 30px;
-}
+        .text-login h3 {
+            font-family: 700 18px 'Poppins',sans-serif;
+            color: var(--blue-dark);
+            margin-bottom: 30px;
+        }
 
 form {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-form input::placeholder {
-    color: var(--white);
-}
+    form input::placeholder {
+        color: var(--white);
+    }
 
-form img {
-    width: 18px;
-    position: absolute;
-}
+        form img {
+            width: 18px;
+            position: absolute;
+        }
 
 #icone-email {
     margin-top: 5px;
@@ -101,12 +95,11 @@ form img {
 form input[type="email"], form input[type="password"] {
     outline: none;
     border: none;
-    background-color: transparent;
-    margin-bottom: 20px;
     border-bottom: 1px solid var(--white);
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    margin-bottom: 20px;
     padding: 5px 0px 5px 35px;
+    font: 18px 'Poppins', sans-serif;
     color: #fff;
 }
 
@@ -116,30 +109,30 @@ form input[type="email"]:focus, form input[type="password"]:focus {
 
 .confirmar-login {
     margin-top: 40px;
-    background-color: var(--magenta);
-    border: none;
     padding: 10px 40px;
-    font-family: 18px;
-    color: #fff;
+    background: var(--magenta);
+    border: none;
     border-radius: 30px;
+    font: 18px;
+    color: #fff;
     position: relative;
     cursor: pointer;
 }
 
-.confirmar-login::after {
-    content: '';
-    position: absolute;
-    left: calc(-0.5rem - 1px);
-    top: calc(-0.5rem - 1px);
-    width: calc(100% + 1rem);
-    height: calc(100% + 1rem);
-    border: 1px solid var(--magenta);
-    border-radius: 1.5rem;
-}
+    .confirmar-login::after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 1rem);
+        height: calc(100% + 1rem);
+        left: calc(-0.5rem - 1px);
+        top: calc(-0.5rem - 1px);
+        border: 1px solid var(--magenta);
+        border-radius: 1.5rem;
+    }
 
-.confirmar-login:hover, .confirmar-login:hover:after {
-    box-shadow: 0 0 30px var(--magenta);
-}
+        .confirmar-login:hover, .confirmar-login:hover:after {
+            box-shadow: 0 0 30px var(--magenta);
+        }
 
 #cadastro-login {
     margin-top: 50px;
@@ -147,28 +140,26 @@ form input[type="email"]:focus, form input[type="password"]:focus {
     justify-content: space-between;
 }
 
-#cadastro-login a {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-}
+    #cadastro-login a {
+        text-decoration: none;
+        font: 700 16px 'Poppins', sans-serif;
+    }
 
 .esq-button {
     color: var(--blue-suave-dark);
 }
 
-.esq-button:hover {
-    text-decoration: underline var(--blue-suave-dark) !important;
-}
+    .esq-button:hover {
+        text-decoration: underline var(--blue-suave-dark) !important;
+    }
 
 .criar-button {
-    color: var(--blue-dark);
+    color: var(--magenta);
 }
 
-.criar-button:hover {
-    text-decoration: underline var(--blue-dark) !important;
-}
+    .criar-button:hover {
+        text-decoration: underline var(--magenta) !important;
+    }
 
 @media (max-width:576px) {
     .login-left, .line-login {

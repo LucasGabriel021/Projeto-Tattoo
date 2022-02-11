@@ -9,6 +9,15 @@
     --blue-white: #D1F7FF;
 }
 
+/*CONFIG GLOBAL*/
+h1 {
+    font-size: 44px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
 /*CONFIG HEADER*/
 #menu-list a:hover, #menu-list .button-activate a {
     color: var(--blue-suave);
@@ -40,28 +49,15 @@
     gap: 30;
 }
 
-h1 {
-    font-size: 44px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 20px;
-}
-
 .text-main p {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font: 100 20px/30px 'Poppins', sans-serif;
     color: var(--black);
-    line-height: 30px;
 }
 
 .main-right {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background-image: url(/assets/img/celular-app.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(/assets/img/celular-app.png) no-repeat center;
     background-size: contain;
     height: 550px;
 }
@@ -72,43 +68,45 @@ h1 {
     margin-top: 30px;
 }
 
-.buttons-main a {
-    text-decoration: none;
-    background-color: #000;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    transition: all 0.5s;
-    margin-bottom: 15px;
-}
+    .buttons-main a {
+        text-decoration: none;
+        background-color: #000;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        transition: all 0.5s;
+        margin-bottom: 15px;
+    }
 
-.buttons-main a:hover {
-    transform: scale(1.1);
-}
+        .buttons-main a:hover {
+            transform: scale(1.1);
+        }
 
 .android, .ios {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font: 700 20px 'Poppins', sans-serif;
     color: var(--black);
     margin-right: 5px;
 }
 
-.android img, .ios img {
-    width: 23px;
-    margin: 0px 2px;
-}
+    .android img, .ios img {
+        width: 23px;
+        margin: 0px 2px;
+    }
 
 .estrela-cult {
     opacity: 50%;
 }
 
 @media (max-width:576px) {  
+    h1 {
+        font-size: 30px;
+    }
+
     #main-download {
         height: auto;
     }
@@ -122,10 +120,6 @@ h1 {
     .main-left {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-    }
-    
-    h1 {
-        font-size: 30px;
     }
     
     .text-main p {
@@ -144,16 +138,16 @@ h1 {
         margin-top: 30px;
     }
     
-    .buttons-main a {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
+        .buttons-main a {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
     
     .android, .ios {
         font-size: 16px;
     }
     
-    .android img, .ios img {
-        width: 16px;
-    }
+        .android img, .ios img {
+            width: 16px;
+        }
 }

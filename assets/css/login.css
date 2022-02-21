@@ -61,7 +61,7 @@
     }
 
         .text-login h3 {
-            font-family: 700 18px 'Poppins',sans-serif;
+            font: 700 18px 'Poppins', sans-serif;
             color: var(--blue-dark);
             margin-bottom: 30px;
         }

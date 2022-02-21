@@ -306,21 +306,42 @@ h1 {
     justify-content: center;
 }
 
-    .blog-button button {
+    .blog-button button{
         margin-top: 40px;
         padding: 10px 30px;
-        color: var(--white);
-        background-color: var(--blue-suave-dark);
-        border: none;
-        border-radius: 10px;
+        border: 2px solid var(--blue-suave);
+        border-radius: 2px;
+        position: relative;
+        z-index: 999;
+        overflow: hidden;
+        background-color: transparent;
+        color: var(--blue-suave);
         font: 700 18px 'Poppins', sans-serif;
-        transition: all linear 400ms;
+        transition: all .3s;
         cursor: pointer;
     }
 
-        .blog-button button:hover {
+        .blog-button button::before{
+            content: '';
+            width: 0;
+            height: 300%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
             background-color: var(--blue-suave);
+            transition: all .5s ease;
+            display: block;
+            z-index: -1;
         }
+
+            .blog-button button:hover::before {
+                width: 100%;
+            }
+       
+            .blog-button button:hover {
+                color: #fff;
+            }  
 
 
 /*CONFIG SECTION INFO*/
@@ -490,21 +511,41 @@ h1 {
 .button-left button{
     margin-top: 40px;
     padding: 10px 30px;
-    color: var(--white);
-    background-color: var(--blue-suave);
-    border: none;
-    border-radius: 10px;
+    border: 2px solid var(--blue-suave);
+    border-radius: 2px;
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+    background-color: transparent;
+    color: var(--blue-suave);
     font: 700 18px 'Poppins', sans-serif;
-    transition: all linear 400ms;
+    transition: all .3s;
     cursor: pointer;
 }
 
-    .button-left button:hover {
-        background-color: var(--blue-white);
-        color: #000;
+    .button-left button::before{
+        content: '';
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--blue-suave);
+        transition: all .5s ease;
+        display: block;
+        z-index: -1;
     }
 
+        .button-left button:hover::before {
+            width: 100%;
+        }
+       
+        .button-left button:hover {
+            color: var(--blue-suave-dark);
+        }    
 
+        
 /*CONFIG FOOTER CONTAINER*/
 #footer {
     display: flex;
@@ -644,7 +685,7 @@ h1 {
         height: 18px;
     }
 
-    
+
 @media (max-width:576px) {
     /*CONFIG SECTION HEADER*/
     #header {

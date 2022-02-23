@@ -17,17 +17,28 @@ function decidirBotao() {
         document.getElementById('botao-ancora').style.display = 'inline-block';
     }
 }
-
 window.addEventListener('scroll', decidirBotao);
 
 
 //Config de botão toggle
-function menuAcao() {
-    let menuArea = document.getElementById('menu');
-    if (menuArea.classList.contains('menuOpen') == true) {
-        menuArea.classList.remove('menuOpen');
+let menuArea = document.getElementById('menu-toggle');
+let line1config = document.querySelector('.line1');
+let line2config = document.querySelector('.line2');
+let line3config = document.querySelector('.line3');
+menuArea.addEventListener('click', () => {
+    let menu = document.getElementById('menu-list');
+    if (menu.classList.contains('show') == true) {
+        menu.classList.remove('show');
+        line1config.style.opacity = '1';
+        line2config.style.transform = 'rotateZ(0deg)';
+        line3config.style.transform = 'rotateZ(0deg)';
+        line2config.style.top = '';
     }
     else {
-        menuArea.classList.add('menuOpen');
+        menu.classList.add('show');
+        line1config.style.opacity = '0';
+        line2config.style.transform = 'rotate(135deg)';
+        line3config.style.transform = 'rotate(-135deg)';
+        line2config.style.top = '7px';
     }
-}
+});

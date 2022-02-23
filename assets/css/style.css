@@ -54,6 +54,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    position: relative;
 }
 
 #nav {
@@ -104,14 +105,11 @@ h1 {
 
 .line1, .line2, .line3 {
     height: 3px;
-    width: 24px;
+    width: 30px;
     background-color: #000;
+    transition: all .5s;
+    position: relative;
 }
-
-.menuOpen {
-    display: inline-flex !important;
-}
-
 
 /*CONFIG BANNER PCL*/
 #banner-pcl {
@@ -150,7 +148,7 @@ h1 {
 #section-news {
     display: flex;
     justify-content: center;
-    padding: 70px;
+    padding: 70px 0px;
 }
 
 .area-news {
@@ -171,6 +169,7 @@ h1 {
 .news-right {
     flex: 2;
     display: flex;
+    background-color: #FF2A6D;
 }
 
     .news-right img {
@@ -739,20 +738,50 @@ h1 {
     }
 
 
-@media (max-width:576px) {
+.show {
+    right: 0 !important;
+}  
+
+@media (max-width:425px) {
     /*CONFIG SECTION HEADER*/
     #header {
         padding: 0px 30px;
     }
 
+    #menu-list {
+        position: absolute;
+        z-index: 8;
+        right: -300px;
+        top: 0;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all ease .3s;
+    }
+
     #menu-list ul, #menu-list li {
-        display: none;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-list ul a {
+        color: #fff;
+        padding: 10px 30px;
     }
 
     #menu-toggle {
         display: inline-flex;
+        position: absolute;
+        z-index: 9;
+        right: 0;
+        margin-right: 30px;
+        gap: 5px;
     }
-    
 
     /*CONFIG SECTION BANNER PRINCIPAL*/
     .filter-banner {
@@ -767,23 +796,45 @@ h1 {
         font-size: 25px;
     }
 
+
     /*CONFIG SECTION NEWS*/
-    .news-container {
-        padding: 0px 30px;
+    #section-news {
+        padding: 0px;
     }
     
     .area-news {
+        display: flex;
         flex-direction: column;
         height: auto;
+        max-width: 425px;
     }
-
+    
+    .news-left {
+        padding: 30px;
+    }
+    
     .news-right {
-        width: 100%;
-        height: 100%;
+        flex: 2;
+    }
+    
+        .news-right img {
+            width: 425px;
+        }
+    
+    .title-news spam {
+        font: 700 25px 'Poppins', sans-serif;
+        color: #fff;
+    }
+    
+    .title-news h3 {
+        font: 700 30px 'Poppins', sans-serif;
+        color: #fff;
+        margin-top: 20px;
     }
     
     .description-news p {
-        font-size: 18px;
+        font: normal 16px 'Poppins', sans-serif;
+        color: #fff;
     }
 
     .button-news-left {
@@ -791,7 +842,8 @@ h1 {
     }
 
     .button-news-left button {
-        padding: 10px 140px;
+        display: inline;
+        width: 100%;
     }
     
     .button-news-left button::before{
@@ -819,10 +871,13 @@ h1 {
         justify-content: space-between;
     }
     
+    .img-future {
+        display: flex;
+        flex: 0;
+    }
+
         .img-future img {
-            width: 177px;
-            height: 140px;
-            
+            width: 150px;
         } 
 
     /*CONFIG SECTION BLOG*/
@@ -857,7 +912,8 @@ h1 {
     }
 
     .blog-button button{
-        padding: 10px 140px;
+        display: inline;
+        width: 100%;
     }
 
         .blog-button button::before{
@@ -938,8 +994,13 @@ h1 {
         font-size: 36px;
     }
 
+    .button-right {
+        text-align: center;
+    }
+
     .button-right button{
-        padding: 10px 140px;
+        display: inline;
+        width: 100%;
     }
     
         .button-right button::before{

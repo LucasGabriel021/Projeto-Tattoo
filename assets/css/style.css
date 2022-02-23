@@ -20,7 +20,7 @@
 
 /*CONFIG GLOBAL*/
 body::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-track {
@@ -37,9 +37,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-    font: normal 96px 'Poppins', sans-serif;
+    font: bold 96px 'Poppins', sans-serif;
     color: var(--white);
 }
+
+    h1 span {
+        color: #05D9E8;
+    }
 
 
 /*CONFIG HEADER*/
@@ -120,14 +124,25 @@ h1 {
 }
 
 .banner-container {
+    width: inherit;
+    height: inherit;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 21px;
 }
 
+.filter-banner {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 80px);
+    width: 100%;
+    position: absolute;
+}
+
 .subtitle-banner h2 {
-    font: 700 33px 'Poppins', sans-serif;
-    color: var(--blue-suave);
+    font: bold 50px 'Poppins', sans-serif;
+    color: #fff;
 }
 
 
@@ -135,46 +150,85 @@ h1 {
 #section-news {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 70px 0px;
+    padding: 70px;
 }
 
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.area-news {
+    display: flex;
+    width: 100%;
+    height: 500px;
 }
 
-.text-news {
+.news-left {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    padding: 33px;
+    background-color: var(--blue-suave-dark);
 }
 
+.news-right {
+    flex: 2;
+    display: flex;
+}
+
+    .news-right img {
+        flex: 2;
+    }
+
 .title-news spam {
-    font: normal 20px 'Poppins', sans-serif;
-    color: var(--black);
+    font: 700 25px 'Poppins', sans-serif;
+    color: #fff;
 }
 
 .title-news h3 {
-    font: 700 36px 'Poppins', sans-serif;
-    color: var(--black);
+    font: 700 30px 'Poppins', sans-serif;
+    color: #fff;
     margin-top: 20px;
 }
 
 .description-news p {
     font: normal 16px 'Poppins', sans-serif;
-    color: var(--black);
+    color: #fff;
 }
 
-.img-news {
-    background: url(/assets/img/img-news.jpg) center;
-    background-size: cover;
-    height: 488px;
-    border-radius: 10px;
+.button-news-left button{
+    margin-top: 40px;
+    padding: 10px 30px;
+    border: 2px solid var(--blue-suave);
+    border-radius: 2px;
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+    background-color: transparent;
+    color: var(--blue-suave);
+    font: 700 18px 'Poppins', sans-serif;
+    transition: all .3s;
+    cursor: pointer;
 }
 
+    .button-news-left button::before{
+        content: '';
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--blue-suave);
+        transition: all .5s ease;
+        display: block;
+        z-index: -1;
+    }
+
+        .button-news-left button:hover::before {
+            width: 100%;
+        }
+       
+        .button-news-left button:hover {
+            color: var(--blue-suave-dark);
+        } 
 
 /*CONFIG SECTION NEWS*/
 #section-future {
@@ -469,10 +523,6 @@ h1 {
     padding: 70px;
 }
 
-.tibal-container {
-    padding: 70px 0px;
-}
-
 .area-tribal-conteudo{
     display: flex;
     width: 100%;
@@ -481,11 +531,11 @@ h1 {
 
 .tribal-left {
     flex: 2;
+    display: flex;
 }
 
     .tribal-left img {
-        width: 100%;
-        height: 100%;
+        flex: 2;
     }
 
 .tribal-right {
@@ -508,7 +558,7 @@ h1 {
         margin-top: 30px;
     }
 
-.button-left button{
+.button-right button{
     margin-top: 40px;
     padding: 10px 30px;
     border: 2px solid var(--blue-suave);
@@ -523,7 +573,7 @@ h1 {
     cursor: pointer;
 }
 
-    .button-left button::before{
+    .button-right button::before{
         content: '';
         width: 0;
         height: 300%;
@@ -537,11 +587,11 @@ h1 {
         z-index: -1;
     }
 
-        .button-left button:hover::before {
+        .button-right button:hover::before {
             width: 100%;
         }
        
-        .button-left button:hover {
+        .button-right button:hover {
             color: var(--blue-suave-dark);
         }    
 
@@ -671,18 +721,21 @@ h1 {
     display: none;
     background-color: var(--blue-suave);
     padding: 8px;
-    border-radius: 25%;
+    border-radius: 50%;
+    transition: all 0.5s;
+    opacity: 0;
 }
 
     #botao-ancora button {
         outline: none;
         background-color: transparent;
         border: none;
+        padding: 5px;
     }
 
     #botao-ancora img {
-        width: 20px;
-        height: 18px;
+        width: 12px;
+        height: 12px;
     }
 
 
@@ -702,38 +755,48 @@ h1 {
     
 
     /*CONFIG SECTION BANNER PRINCIPAL*/
-    #banner-pcl {
-      padding: 0px 30px;
+    .filter-banner {
+        padding: 0px 30px;
     }
 
     .title-banner h1 {
-        font-size: 70px;
+        font-size: 49px;
     }
     
     .subtitle-banner h2 {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     /*CONFIG SECTION NEWS*/
     .news-container {
-        grid-template-columns: 1fr;
         padding: 0px 30px;
     }
-
-    .text-news {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
     
-    .title-news h3 {
-        font-size: 24px;
-    }
-    
-    .img-news {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
+    .area-news {
+        flex-direction: column;
+        height: auto;
     }
 
+    .news-right {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .description-news p {
+        font-size: 18px;
+    }
+
+    .button-news-left {
+        text-align: center;
+    }
+
+    .button-news-left button {
+        padding: 10px 140px;
+    }
+    
+    .button-news-left button::before{
+        height: 700%;
+    }
 
     /*CONFIG SECTION FUTURE*/
     .future-container {
@@ -749,10 +812,18 @@ h1 {
     }
     
     .future-galeria {
-        max-width: 425px;
+        width: 100%;
+        flex-wrap: wrap;
         height: auto;
-        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
     }
+    
+        .img-future img {
+            width: 177px;
+            height: 140px;
+            
+        } 
 
     /*CONFIG SECTION BLOG*/
     .blog-container {
@@ -785,7 +856,14 @@ h1 {
         grid-row: 4 / 5;
     }
 
-    
+    .blog-button button{
+        padding: 10px 140px;
+    }
+
+        .blog-button button::before{
+            height: 700%;
+        }
+
     /*CONFIG SECTION INFO*/
     .info-container {
         flex-direction: column;
@@ -832,7 +910,7 @@ h1 {
 
 
     /*CONFIG SECTION TEXTO*/
-    .texto-container {
+    .frase-container {
         padding: 70px 30px;
     }
     
@@ -843,7 +921,7 @@ h1 {
 
     /*CONFIG SECTION TRIBAL*/
     #section-tribal {
-        padding: 70px 30px;
+        padding: 0px;
     }
     
     .area-tribal-conteudo{
@@ -859,6 +937,14 @@ h1 {
     .texto-right h4 {
         font-size: 36px;
     }
+
+    .button-right button{
+        padding: 10px 140px;
+    }
+    
+        .button-right button::before{
+            height: 700%;
+        }
 
 
     /*CONFIG FOOTER CONTAINER*/

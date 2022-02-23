@@ -1,18 +1,19 @@
 //Config de Scroll suave
-function botaoAncora() {
+let actionButton = document.querySelector('#buttonAncora');
+actionButton.addEventListener('click', () => {
     window.scrollTo(
         {
             top: 0,
             behavior: "smooth"
         }
     )
-}
-
+});
 function decidirBotao() {
     if(window.scrollY == 0) {
         document.getElementById('botao-ancora').style.display = 'none';
     }
-    else {
+    else {    
+        document.getElementById('botao-ancora').style.opacity = 1;
         document.getElementById('botao-ancora').style.display = 'inline-block';
     }
 }

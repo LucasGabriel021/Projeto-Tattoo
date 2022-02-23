@@ -1,0 +1,24 @@
+body{
+     background-color: #000;
+     height: calc(100vh - 80px);
+     width: 100vw;
+}
+
+/*CONFIG HEADER*/
+#menu-list a:hover, #menu-list .button-activate a {
+     color: var(--blue-suave);
+     border-bottom: 1px solid var(--blue-suave);
+ }
+
+section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     width: 100%;
+ }
+
+h1 {
+     font: bold 50px 'Poppins', sans-serif;
+     color: #fff;
+}

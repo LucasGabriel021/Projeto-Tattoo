@@ -751,11 +751,11 @@ h1 {
     #menu-list {
         position: absolute;
         z-index: 8;
-        right: -300px;
+        right: -500px;
         top: 0;
         height: calc(100vh - 80px);
         margin-top: 80px;
-        width: 60%;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
         transition: all ease .3s;
     }

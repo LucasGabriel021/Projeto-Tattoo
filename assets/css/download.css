@@ -57,7 +57,7 @@ h1 {
 .main-right {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background: url(/assets/img/celular-app.png) no-repeat center;
+    background: url(../img/celular-app.png) no-repeat center;
     background-size: contain;
     height: 550px;
 }

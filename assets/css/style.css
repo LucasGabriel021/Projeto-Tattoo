@@ -113,7 +113,7 @@ h1 {
 
 /*CONFIG BANNER PCL*/
 #banner-pcl {
-    background: url(/assets/img/background-pcl.png) center;
+    background: url(../img/background-pcl.png) center;
     background-size: cover;
     height: calc(100vh - 80px);
     display: flex;
@@ -302,7 +302,7 @@ h1 {
 }
 
 .area2 {
-    background: url(/assets/img/placa-tattoo.jpg) center;
+    background: url(../img/placa-tattoo.jpg) center;
     background-size: cover;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -312,7 +312,7 @@ h1 {
 }
 
 .area3 {
-    background: url(/assets/img/model-tattoo.jpg) center;
+    background: url(../img/model-tattoo.jpg) center;
     background-size: cover;
     grid-column: 2 / 3;
     grid-row: 1 / 3;

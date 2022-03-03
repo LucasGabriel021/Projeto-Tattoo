@@ -162,6 +162,11 @@ form input[type="email"]:focus, form input[type="password"]:focus {
     }
 
 @media (max-width:576px) {
+    #menu-list a:hover, #menu-list .button-activate a {
+        color: #fff;
+        border: none;
+    }
+
     .login-left, .line-login {
         display: none;
     }

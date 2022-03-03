@@ -1,3 +1,14 @@
+/*VARIÁVEIS*/
+:root {
+     --white: #FFF;
+     --black: #000;
+     --magenta: #FF2A6D;
+     --blue-suave: #05D9E8;
+     --blue-dark: #01012B;
+     --blue-suave-dark: #005678;
+     --blue-white: #D1F7FF;
+ }
+
 body{
      background-color: #000;
      height: calc(100vh - 80px);
@@ -8,7 +19,7 @@ body{
 #menu-list a:hover, #menu-list .button-activate a {
      color: var(--blue-suave);
      border-bottom: 1px solid var(--blue-suave);
- }
+}
 
 section {
      display: flex;
@@ -16,9 +27,16 @@ section {
      justify-content: center;
      height: 100%;
      width: 100%;
- }
+}
 
 h1 {
      font: bold 50px 'Poppins', sans-serif;
      color: #fff;
 }
+
+@media (max-width:576px) {
+     #menu-list a:hover, #menu-list .button-activate a {
+          color: #fff;
+          border-bottom: #fff;
+     }
+ }

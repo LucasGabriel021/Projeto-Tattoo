@@ -107,6 +107,11 @@ h1 {
         font-size: 30px;
     }
 
+    #menu-list a:hover, #menu-list .button-activate a {
+        color: #fff;
+        border: none;
+    }
+
     #main-download {
         height: auto;
     }

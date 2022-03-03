@@ -29,16 +29,16 @@ menuArea.addEventListener('click', () => {
     let menu = document.getElementById('menu-list');
     if (menu.classList.contains('show') == true) {
         menu.classList.remove('show');
-        line1config.style.opacity = '1';
-        line2config.style.transform = 'rotateZ(0deg)';
+        line1config.style.transform = 'rotateZ(0deg)';
+        line2config.style.opacity = '1';
         line3config.style.transform = 'rotateZ(0deg)';
-        line2config.style.top = '';
+        line3config.style.top = '';
     }
     else {
         menu.classList.add('show');
-        line1config.style.opacity = '0';
-        line2config.style.transform = 'rotate(135deg)';
+        line1config.style.transform = 'rotate(135deg)';
+        line2config.style.opacity = '0';
         line3config.style.transform = 'rotate(-135deg)';
-        line2config.style.top = '7px';
+        line3config.style.top = '-15px';
     }
 });

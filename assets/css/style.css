@@ -741,7 +741,7 @@ h1 {
     right: 0 !important;
 }  
 
-@media (max-width:425px) {
+@media (max-width:360px) {
     #botao-ancora {
         display: none !important;
     }
@@ -801,11 +801,11 @@ h1 {
     }
 
     .title-banner h1 {
-        font-size: 49px;
+        font-size: 40px;
     }
     
     .subtitle-banner h2 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     /*CONFIG SECTION NEWS*/
@@ -886,7 +886,7 @@ h1 {
     }
 
         .img-future img {
-            width: 150px;
+            width: 140px;
         } 
 
     /*CONFIG SECTION BLOG*/
@@ -1015,9 +1015,13 @@ h1 {
         .button-right button::before{
             height: 700%;
         }
-
-
+        
     /*CONFIG FOOTER CONTAINER*/
+    .social-footer {
+        gap: 30px;
+        padding: 0px 30px;
+    }
+
     .social-footer {
         padding: 70px 30px;
     }
@@ -1029,7 +1033,7 @@ h1 {
     }
     
     .direitos-footer {
-        padding: 70px 30px 0px 30px;
+        padding: 70px 30px 0px;
     }
 
     /*CONFIG BOTÃO ANCORA*/
@@ -1039,7 +1043,7 @@ h1 {
     }
 }
 
-@media (min-width:426px) and (max-width: 768px) {
+@media (min-width:425px) and (max-width: 768px) {
     /*CONFIG SECTION HEADER*/
     #header {
         padding: 0px 30px;
